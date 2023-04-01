@@ -1,0 +1,73 @@
+.skill-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 100px 200px;
+}
+
+.skill-body .skill-title {
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.skill-tray {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: #162033;
+    border-radius: 10px;
+    width: 350px;
+    gap: 30px;
+}
+
+
+.skill-percent-box {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.skill-percent-box .fill {
+    width: 100%;
+    height: 100%;
+    background-color: #72E2AE;
+    z-index: 10;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.skill-percent-box .value {
+    width: 85%;
+    height: 85%;
+    background-color: #162033;
+    z-index: 11;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.skill-box h1 {
+    font-size: 1.2rem;
+}
