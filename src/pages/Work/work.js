@@ -1,0 +1,123 @@
+import React from 'react'
+import Navbar from '../../components/Navbar/navbar'
+import './work.css'
+import img1 from '../../assets/img1.jpg'
+import img2 from '../../assets/img2.png'
+import img3 from '../../assets/img3.jpg'
+import img4 from '../../assets/img4.jpg'
+import img5 from '../../assets/img5.jpg'
+import img6 from '../../assets/img6.jpg'
+import { BiMobileAlt } from 'react-icons/bi'
+import { FaGithub, FaGlobe, FaPhone } from 'react-icons/fa'
+
+export default function Work() {
+    return (
+        <div className="work-body">
+            <Navbar />
+            <div className="work-title">
+                <h3>MY WORKS</h3>
+                <div className="underline">
+                    <div className="dot"></div>
+                </div>
+            </div>
+            <div className="work-content">
+                <div className="work-box">
+                    <div className="work-image">
+                        <div className="work-image-banner">
+                            <div className="work-icon">
+                                <a href="https://github.com/harshk461/VTalk"><BiMobileAlt size={25} /></a>
+                            </div>
+                            <div className="work-icon">
+                                <a href="https://github.com/harshk461/ChatApp"><FaGithub size={25} /></a>
+                            </div>
+                        </div>
+                        <img src={img1} />
+                    </div>
+                    <div className="work-desc">
+                        <span className="work-desc-title">Chat-App</span>
+                        <span className="work-desc-desc">Interactive Chat App</span>
+                    </div>
+                </div>
+                <div className="work-box">
+                    <div className="work-image">
+                        <div className="work-image-banner">
+                            <div className="work-icon">
+                                <a href="https://github.com/harshk461/Crypto-Tracker"><FaGithub size={25} /></a>
+                            </div>
+                        </div>
+                        <img src={img2} />
+                    </div>
+                    <div className="work-desc">
+                        <span className="work-desc-title">Crypto-Tracker</span>
+                        <span className="work-desc-desc">Manage your crypto</span>
+                    </div>
+                </div>
+                <div className="work-box">
+                    <div className="work-image">
+                        <div className="work-image-banner">
+                            <div className="work-icon">
+                                <a href="https://blog-hk.netlify.app/"><FaGlobe size={25} /></a>
+                            </div>
+                            <div className="work-icon">
+                                <a href="https://github.com/harshk461/Blog"><FaGithub size={25} /></a>
+                            </div>
+                        </div>
+                        <img src={img3} />
+                    </div>
+                    <div className="work-desc">
+                        <span className="work-desc-title">Blog UI</span>
+                        <span className="work-desc-desc">Gain Knowledge</span>
+                    </div>
+                </div>
+                <div className="work-box">
+                    <div className="work-image">
+                        <div className="work-image-banner">
+                            <div className="work-icon">
+                                <a href="https://github.com/harshk461/ChatApp"><FaGithub size={25} /></a>
+                            </div>
+                        </div>
+                        <img src={img4} />
+                    </div>
+                    <div className="work-desc">
+                        <span className="work-desc-title">Billing GUI(Python)</span>
+                        <span className="work-desc-desc">Make your billing handy</span>
+                    </div>
+                </div>
+                <div className="work-box">
+                    <div className="work-image">
+                        <div className="work-image-banner">
+                            <div className="work-icon">
+                                <a href="https://weather-hk.netlify.app/"><FaGlobe size={25} /></a>
+                            </div>
+                            <div className="work-icon">
+                                <a href="https://github.com/harshk461/weather-hk"><FaGithub size={25} /></a>
+                            </div>
+                        </div>
+                        <img src={img5} />
+                    </div>
+                    <div className="work-desc">
+                        <span className="work-desc-title">Weather Forecast</span>
+                        <span className="work-desc-desc">Get current weather</span>
+                    </div>
+                </div>
+                <div className="work-box">
+                    <div className="work-image">
+                        <div className="work-image-banner">
+                            <div className="work-icon">
+                                <a href="https://music1-hk.netlify.app/"><FaGlobe size={25} /></a>
+                            </div>
+                            <div className="work-icon">
+                                <a href="https://github.com/harshk461/music-player1"><FaGithub size={25} /></a>
+                            </div>
+                        </div>
+                        <img src={img6} />
+                    </div>
+                    <div className="work-desc">
+                        <span className="work-desc-title">Music Player</span>
+                        <span className="work-desc-desc">Enjoy some music...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}

@@ -6,6 +6,7 @@ import Home from './pages/Home/home'
 import Skill from './pages/Skill/skill'
 import Contact from './pages/Contact/contact'
 import Education from './pages/Education/education'
+import Work from './pages/Work/work'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path='/skill' element={<Skill />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/education' element={<Education />} />
+        <Route path='/work' element={<Work />} />
       </Routes>
     </BrowserRouter>
     // <HomePage />

@@ -13,7 +13,7 @@ export default function Navbar() {
             <a href="/"><h3>Home</h3></a>
             <a href="/about"><h3>About</h3></a>
             <a href="/skill"><h3>Skills</h3></a>
-            <a href="/service"><h3>Work</h3></a>
+            <a href="/work"><h3>Work</h3></a>
             <a href="/contact"><h3>Contact</h3></a>
           </div>
         </div>
