@@ -2,13 +2,17 @@ import React from 'react'
 import aboutImage from '../../assets/about-image.jpg'
 import './about.css'
 import 'animate.css';
+import Navbar from '../../components/Navbar/navbar';
 
 export default function About() {
     return (
         <div className="about-body">
+            <Navbar />
             <div className="about-title">
                 <h2>About Me</h2>
-
+                <div className="underline">
+                    <div className="dot"></div>
+                </div>
             </div>
             <div className="about-content animate__animated animate__bounceInUp">
                 <div className="about-left">

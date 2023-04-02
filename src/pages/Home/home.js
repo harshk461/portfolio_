@@ -34,31 +34,46 @@ export default function Home() {
                     <h7>Code your way to success with a developer who knows web and app like the back of their screen!</h7>
                 </div>
                 <div className="home-socials-link">
-                    <a href="/">
-                        <div className="social-link">
-                            <FaFacebookF size={20} />
+                    <div className="social-link">
+                        <div className="link">
+                            <a href="/"><FaGithub size={20} /></a>
                         </div>
-                    </a>
-                    <a href="/">
-                        <div className="social-link">
-                            <FaInstagram size={20} />
+                        <div className="link-hover">
+                            <a href="/"><FaGithub size={20} /></a>
                         </div>
-                    </a>
-                    <a href="/">
-                        <div className="social-link">
-                            <FaTwitter size={20} />
+                    </div>
+                    <div className="social-link">
+                        <div className="link">
+                            <a href="/"><FaInstagram size={20} /></a>
                         </div>
-                    </a>
-                    <a href="/">
-                        <div className="social-link">
-                            <FaGithub size={20} />
+                        <div className="link-hover">
+                            <a href="/"><FaInstagram size={20} /></a>
                         </div>
-                    </a>
-                    <a href="/">
-                        <div className="social-link">
-                            <FaLinkedinIn size={20} />
+                    </div>
+                    <div className="social-link">
+                        <div className="link">
+                            <a href="/"><FaFacebookF size={20} /></a>
                         </div>
-                    </a>
+                        <div className="link-hover">
+                            <a href="/"><FaFacebookF size={20} /></a>
+                        </div>
+                    </div>
+                    <div className="social-link">
+                        <div className="link">
+                            <a href="/"><FaLinkedinIn size={20} /></a>
+                        </div>
+                        <div className="link-hover">
+                            <a href="/"><FaLinkedinIn size={20} /></a>
+                        </div>
+                    </div>
+                    <div className="social-link">
+                        <div className="link">
+                            <a href="/"><FaTwitter size={20} /></a>
+                        </div>
+                        <div className="link-hover">
+                            <a href="/"><FaTwitter size={20} /></a>
+                        </div>
+                    </div>
                 </div>
 
             </div>
