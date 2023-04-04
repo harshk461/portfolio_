@@ -5,12 +5,14 @@ import './contact.css'
 import emailjs from 'emailjs-com'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import Loader from '../../components/Loader/loader'
 
 export default function Contact() {
     const [name, setname] = useState('');
     const [email, setemail] = useState('');
     const [subject, setsubject] = useState('');
     const [message, setmessage] = useState('');
+    const [isLoading, setisLoading] = useState(false);
     const reset = () => {
         setname('');
         setemail('');
@@ -18,13 +20,11 @@ export default function Contact() {
         setsubject('');
     }
     const handleSubmit = () => {
-        console.log(process.env.REACT_APP_EMAILJS_SERVICE_ID);
-        console.log(process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
-        console.log(process.env.REACT_APP_EMAILJS_USERID);
         if (name == '' || email == '' || subject == '' || message == '') {
             toast.warning("Enter all fields");
         }
         else {
+            setisLoading(true);
             emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, {
                 reply_to: "hk2152573@gmail.com",
                 name: name.toUpperCase,
@@ -40,6 +40,7 @@ export default function Contact() {
                 .catch((err) => {
                     toast.error("Error Occurred...");
                 });
+            setisLoading(false);
             reset();
         }
 
@@ -119,9 +120,13 @@ export default function Contact() {
                         <p>Message</p>
                         <textarea name="message" placeholder='Enter your message...' value={message} onChange={e => setmessage(e.target.value)} ></textarea>
                     </div>
-                    <button className="submit" onClick={handleSubmit}>SEND MAIL</button>
+                    <div className="submit-tray">
+                        <button className="submit" onClick={handleSubmit}>SEND MAIL</button>
+                        <Loader display={isLoading} />
+                    </div>
                 </div>
             </div>
+
             <ToastContainer />
         </div>
     )

@@ -113,6 +113,13 @@
     outline: 2px solid #72E2AE;
 }
 
+.submit-tray {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .submit {
     width: fit-content;
     padding: 10px 20px;
