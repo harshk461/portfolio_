@@ -1,7 +1,5 @@
 .education-body {
     width: 100%;
-    padding: 100px 200px;
-    padding-top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,9 +62,6 @@
 }
 
 @media (max-width:800px) {
-    .education-body {
-        padding: 20px;
-    }
 
     .education-box {
         width: 95%;

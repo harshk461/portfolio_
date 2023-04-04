@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     background-color: #0B1224;
     /* font-family: 'Poppins', sans-serif; */
@@ -13,9 +15,25 @@ body {
     font-family: Arial;
     color: aliceblue;
     overflow-x: hidden;
+    padding: 100px 200px;
+    padding-top: 0;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+@media (max-width:1200px) {
+    body {
+        padding: 50px;
+        padding-top: 0;
+    }
+}
+
+@media (max-width:850px) {
+    body {
+        padding: 20px;
+        padding-top: 0;
+    }
 }

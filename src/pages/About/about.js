@@ -17,6 +17,10 @@ export default function About() {
             <div className="about-content animate__animated animate__bounceInUp">
                 <div className="about-left">
                     <img src={aboutImage} />
+                    <span><div className="image-dot-top image-dot"></div></span>
+                    <span><div className="image-dot-bottom image-dot "></div></span>
+                    <span><div className="image-dot-left image-dot "></div></span>
+                    <span><div className="image-dot-right image-dot"></div></span>
                 </div>
                 <div className="about-right">
                     <div className="about-right-content">
@@ -30,7 +34,7 @@ export default function About() {
                             <li>Languages: <span>English,Hindi</span></li>
                             <li>Freelance: <span>Available</span></li>
                         </ul>
-                        <button className="resume-download">Download Resume</button>
+                        <a className="resume-download" href='https://drive.google.com/file/d/1Fzo83I1CTRYu5SMUPLZoYPSVbJCvv48q/view' target="_blank">Download Resume</a>
                     </div>
                 </div>
             </div>

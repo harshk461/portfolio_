@@ -1,9 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaEnvelope, FaInstagram, FaLocationArrow, FaPhoneAlt } from 'react-icons/fa'
 import Navbar from '../../components/Navbar/navbar'
 import './contact.css'
+import emailjs from 'emailjs-com'
+import { toast, ToastContainer } from 'react-toastify'
 
 export default function Contact() {
+    const [name, setname] = useState('');
+    const [email, setemail] = useState('');
+    const [subject, setsubject] = useState('');
+    const [message, setmessage] = useState('');
+    const reset = () => {
+        setname('');
+        setemail('');
+        setmessage('');
+        setsubject('');
+    }
+    const handleSubmit = () => {
+        console.log(process.env.REACT_APP_EMAILJS_USERID);
+        if (name == '' || email == '' || subject == '' || message == '') {
+            toast.warning("Enter all fields");
+        }
+        else {
+            emailjs.send(process.env.REACT_APP_EMAILJS_SERVICEID, process.env.REACT_APP_EMAILJS_TEMPLATEID, {
+                reply_to: "hk2152573@gmail.com",
+                name: name.toUpperCase,
+                email: email,
+                subject: subject,
+                message: message,
+            }, process.env.REACT_APP_EMAILJS_USERID)
+                .then(res => {
+                    if (res.text == 'OK') {
+                        toast.success("Message sent successfully...");
+                    }
+                })
+                .catch((err) => {
+                    toast.error("Error Occurred...");
+                });
+            reset();
+        }
+
+    }
+
     return (
         <div className="contact-body">
             <Navbar />
@@ -64,23 +102,24 @@ export default function Contact() {
                 <div className="contact-right">
                     <div className="input-field-box">
                         <p>Name</p>
-                        <input type="text" placeholder='Enter your name...' />
+                        <input type="text" placeholder='Enter your name...' value={name} onChange={e => setname(e.target.value)} />
                     </div>
                     <div className="input-field-box">
                         <p>Email</p>
-                        <input type="text" placeholder='Enter your email...' />
+                        <input type="text" placeholder='Enter your email...' value={email} onChange={e => setemail(e.target.value)} />
                     </div>
                     <div className="input-field-box">
                         <p>Subject</p>
-                        <input type="text" placeholder='Enter Subject..' />
+                        <input type="text" placeholder='Enter Subject..' value={subject} onChange={e => setsubject(e.target.value)} />
                     </div>
                     <div className="input-field-box">
                         <p>Message</p>
-                        <textarea name="message" placeholder='Enter your message...'></textarea>
+                        <textarea name="message" placeholder='Enter your message...' value={message} onChange={e => setmessage(e.target.value)} ></textarea>
                     </div>
-                    <button className="submit">SEND MAIL</button>
+                    <button className="submit" onClick={handleSubmit}>SEND MAIL</button>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     )
 }
