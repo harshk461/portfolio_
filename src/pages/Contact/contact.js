@@ -4,6 +4,7 @@ import Navbar from '../../components/Navbar/navbar'
 import './contact.css'
 import emailjs from 'emailjs-com'
 import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
     const [name, setname] = useState('');
@@ -17,12 +18,14 @@ export default function Contact() {
         setsubject('');
     }
     const handleSubmit = () => {
+        console.log(process.env.REACT_APP_EMAILJS_SERVICE_ID);
+        console.log(process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
         console.log(process.env.REACT_APP_EMAILJS_USERID);
         if (name == '' || email == '' || subject == '' || message == '') {
             toast.warning("Enter all fields");
         }
         else {
-            emailjs.send(process.env.REACT_APP_EMAILJS_SERVICEID, process.env.REACT_APP_EMAILJS_TEMPLATEID, {
+            emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, {
                 reply_to: "hk2152573@gmail.com",
                 name: name.toUpperCase,
                 email: email,
