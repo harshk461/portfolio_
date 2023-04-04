@@ -3,6 +3,7 @@ import './skill.css'
 import 'animate.css';
 import Service from '../Services/service';
 import Navbar from '../../components/Navbar/navbar';
+import Footer from '../../components/Footer/footer';
 
 export default function Skill() {
     return (
@@ -137,6 +138,7 @@ export default function Skill() {
                 </div>
             </div>
             <Service />
+            <Footer />
         </div>
     )
 }

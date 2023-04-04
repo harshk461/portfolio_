@@ -15,8 +15,7 @@ body {
     font-family: Arial;
     color: aliceblue;
     overflow-x: hidden;
-    padding: 100px 200px;
-    padding-top: 0;
+    padding: 0px 200px;
 }
 
 a {

@@ -3,6 +3,7 @@ import aboutImage from '../../assets/about-image.jpg'
 import './about.css'
 import 'animate.css';
 import Navbar from '../../components/Navbar/navbar';
+import Footer from '../../components/Footer/footer';
 
 export default function About() {
     return (
@@ -38,6 +39,7 @@ export default function About() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

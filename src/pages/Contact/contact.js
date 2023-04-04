@@ -6,6 +6,7 @@ import emailjs from 'emailjs-com'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import Loader from '../../components/Loader/loader'
+import Footer from '../../components/Footer/footer'
 
 export default function Contact() {
     const [name, setname] = useState('');
@@ -128,6 +129,7 @@ export default function Contact() {
             </div>
 
             <ToastContainer />
+            <Footer />
         </div>
     )
 }

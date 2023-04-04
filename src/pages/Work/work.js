@@ -9,6 +9,7 @@ import img5 from '../../assets/img5.jpg'
 import img6 from '../../assets/img6.jpg'
 import { BiMobileAlt } from 'react-icons/bi'
 import { FaGithub, FaGlobe, FaPhone } from 'react-icons/fa'
+import Footer from '../../components/Footer/footer'
 
 export default function Work() {
     return (
@@ -118,6 +119,7 @@ export default function Work() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
