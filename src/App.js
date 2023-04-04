@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import About from './pages/About/about'
@@ -9,6 +9,9 @@ import Education from './pages/Education/education'
 import Work from './pages/Work/work'
 
 export default function App() {
+  useEffect(() => {
+    document.title = 'harshkkk.';
+  }, [])
   return (
     <BrowserRouter>
       <Routes>
