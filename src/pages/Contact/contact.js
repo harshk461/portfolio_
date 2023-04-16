@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaEnvelope, FaInstagram, FaLocationArrow, FaPhoneAlt } from 'react-icons/fa'
+import { FaEnvelope, FaLocationArrow, FaPhoneAlt } from 'react-icons/fa'
 import Navbar from '../../components/Navbar/navbar'
 import './contact.css'
 import emailjs from 'emailjs-com'
@@ -21,20 +21,20 @@ export default function Contact() {
         setsubject('');
     }
     const handleSubmit = () => {
-        if (name == '' || email == '' || subject == '' || message == '') {
+        if (name === '' || email === '' || subject === '' || message === '') {
             toast.warning("Enter all fields");
         }
         else {
             setisLoading(true);
-            emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, {
+            emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID.toString(), process.env.REACT_APP_EMAILJS_TEMPLATE_ID.toString(), {
                 reply_to: "hk2152573@gmail.com",
                 name: name.toUpperCase,
                 email: email,
                 subject: subject,
                 message: message,
-            }, process.env.REACT_APP_EMAILJS_USERID)
+            }, process.env.REACT_APP_EMAILJS_USERID.toString())
                 .then(res => {
-                    if (res.text == 'OK') {
+                    if (res.text === 'OK') {
                         toast.success("Message sent successfully...");
                     }
                 })
