@@ -41,21 +41,21 @@ export default function Contact() {
         }
         else {
             setisLoading(true);
-            // emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, {
-            //     reply_to: "hk2152573@gmail.com",
-            //     name: name.toUpperCase,
-            //     email: email,
-            //     subject: subject,
-            //     message: message,
-            // }, process.env.REACT_APP_EMAILJS_USERID)
-            //     .then(res => {
-            //         if (res.text === 'OK') {
-            //             toast.success("Message sent successfully...");
-            //         }
-            //     })
-            //     .catch((err) => {
-            //         toast.error("Error Occurred...");
-            //     });
+            emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, {
+                reply_to: "hk2152573@gmail.com",
+                name: name.toUpperCase,
+                email: email,
+                subject: subject,
+                message: message,
+            }, process.env.REACT_APP_EMAILJS_USERID)
+                .then(res => {
+                    if (res.text === 'OK') {
+                        toast.success("Message sent successfully...");
+                    }
+                })
+                .catch((err) => {
+                    toast.error("Error Occurred...");
+                });
 
             emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID_2, {
                 name: name,
