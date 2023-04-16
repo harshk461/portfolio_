@@ -27,13 +27,13 @@ export default function Contact() {
         }
         else {
             setisLoading(true);
-            await emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID.toString(), process.env.REACT_APP_EMAILJS_TEMPLATE_ID.toString(), {
+            await emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, {
                 reply_to: "hk2152573@gmail.com",
                 name: name.toUpperCase,
                 email: email,
                 subject: subject,
                 message: message,
-            }, process.env.REACT_APP_EMAILJS_USERID.toString())
+            }, process.env.REACT_APP_EMAILJS_USERID)
                 .then(res => {
                     if (res.text === 'OK') {
                         toast.success("Message sent successfully...");

@@ -133,6 +133,10 @@
     transition: 300ms all ease-in-out;
 }
 
+.submit-tray .spinner {
+    margin-top: 10px;
+    margin-right: 50px;
+}
 
 .submit:hover {
     background: #fff;
