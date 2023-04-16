@@ -19,14 +19,15 @@ export default function Contact() {
         setemail('');
         setmessage('');
         setsubject('');
-    }
-    const handleSubmit = () => {
+    };
+
+    const handleSubmit = async () => {
         if (name === '' || email === '' || subject === '' || message === '') {
             toast.warning("Enter all fields");
         }
         else {
             setisLoading(true);
-            emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID.toString(), process.env.REACT_APP_EMAILJS_TEMPLATE_ID.toString(), {
+            await emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID.toString(), process.env.REACT_APP_EMAILJS_TEMPLATE_ID.toString(), {
                 reply_to: "hk2152573@gmail.com",
                 name: name.toUpperCase,
                 email: email,
