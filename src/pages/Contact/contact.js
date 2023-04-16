@@ -20,27 +20,55 @@ export default function Contact() {
         setmessage('');
         setsubject('');
     };
-
-    const handleSubmit = async () => {
+    const response_message = (name) => {
+        const res_msg = `
+        Dear ${name},
+        
+        Thank you for reaching out to me through my portfolio's contact page. I appreciate your interest in my work and the time you took to send me a message.
+        
+        I want to let you know that I have received your message and will respond to you as soon as possible. If you have any urgent inquiries, please don't hesitate to let me know.
+        
+        Thank you again for your message, and I look forward to connecting with you soon.
+        
+        Best regards,
+        Harsh
+        `;
+        return res_msg;
+    }
+    const handleSubmit = () => {
         if (name === '' || email === '' || subject === '' || message === '') {
             toast.warning("Enter all fields");
         }
         else {
             setisLoading(true);
-            await emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, {
-                reply_to: "hk2152573@gmail.com",
-                name: name.toUpperCase,
+            // emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, {
+            //     reply_to: "hk2152573@gmail.com",
+            //     name: name.toUpperCase,
+            //     email: email,
+            //     subject: subject,
+            //     message: message,
+            // }, process.env.REACT_APP_EMAILJS_USERID)
+            //     .then(res => {
+            //         if (res.text === 'OK') {
+            //             toast.success("Message sent successfully...");
+            //         }
+            //     })
+            //     .catch((err) => {
+            //         toast.error("Error Occurred...");
+            //     });
+
+            emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID_2, {
+                name: name,
+                message: response_message(name),
                 email: email,
-                subject: subject,
-                message: message,
+                reply_to: email,
             }, process.env.REACT_APP_EMAILJS_USERID)
                 .then(res => {
                     if (res.text === 'OK') {
-                        toast.success("Message sent successfully...");
+                        console.log("Sent");
                     }
-                })
-                .catch((err) => {
-                    toast.error("Error Occurred...");
+                }).catch((e) => {
+                    toast.error("Error Occurred");
                 });
             setisLoading(false);
             reset();
