@@ -41,6 +41,7 @@ export default function Contact() {
         }
         else {
             setisLoading(true);
+
             emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, {
                 reply_to: "hk2152573@gmail.com",
                 name: name.toUpperCase,
@@ -50,6 +51,19 @@ export default function Contact() {
             }, process.env.REACT_APP_EMAILJS_USERID)
                 .then(res => {
                     if (res.text === 'OK') {
+                        emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID_2, {
+                            name: name,
+                            message: response_message(name),
+                            email: email,
+                            reply_to: email,
+                        }, process.env.REACT_APP_EMAILJS_USERID)
+                            .then(res => {
+                                if (res.text === 'OK') {
+                                    console.log("Sent");
+                                }
+                            }).catch((e) => {
+                                toast.error("Error Occurred");
+                            });
                         toast.success("Message sent successfully...");
                     }
                 })
@@ -57,19 +71,6 @@ export default function Contact() {
                     toast.error("Error Occurred...");
                 });
 
-            emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID_2, {
-                name: name,
-                message: response_message(name),
-                email: email,
-                reply_to: email,
-            }, process.env.REACT_APP_EMAILJS_USERID)
-                .then(res => {
-                    if (res.text === 'OK') {
-                        console.log("Sent");
-                    }
-                }).catch((e) => {
-                    toast.error("Error Occurred");
-                });
             setisLoading(false);
             reset();
         }
