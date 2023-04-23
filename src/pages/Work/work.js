@@ -7,8 +7,9 @@ import img3 from '../../assets/img3.jpg'
 import img4 from '../../assets/img4.jpg'
 import img5 from '../../assets/img5.jpg'
 import img6 from '../../assets/img6.jpg'
+import img7 from '../../assets/img7.jpg'
 import { BiMobileAlt } from 'react-icons/bi'
-import { FaGithub, FaGlobe, FaPhone } from 'react-icons/fa'
+import { FaGithub, FaGlobe } from 'react-icons/fa'
 import Footer from '../../components/Footer/footer'
 
 export default function Work() {
@@ -32,7 +33,7 @@ export default function Work() {
                                 <a href="https://github.com/harshk461/ChatApp"><FaGithub size={25} /></a>
                             </div>
                         </div>
-                        <img src={img1} />
+                        <img src={img1} alt='Chat App' />
                     </div>
                     <div className="work-desc">
                         <span className="work-desc-title">Chat-App</span>
@@ -46,7 +47,7 @@ export default function Work() {
                                 <a href="https://github.com/harshk461/Crypto-Tracker"><FaGithub size={25} /></a>
                             </div>
                         </div>
-                        <img src={img2} />
+                        <img src={img2} alt='Music Player' />
                     </div>
                     <div className="work-desc">
                         <span className="work-desc-title">Crypto-Tracker</span>
@@ -63,7 +64,7 @@ export default function Work() {
                                 <a href="https://github.com/harshk461/Blog"><FaGithub size={25} /></a>
                             </div>
                         </div>
-                        <img src={img3} />
+                        <img src={img3} alt='Blogs' />
                     </div>
                     <div className="work-desc">
                         <span className="work-desc-title">Blog UI</span>
@@ -77,7 +78,7 @@ export default function Work() {
                                 <a href="https://github.com/harshk461/ChatApp"><FaGithub size={25} /></a>
                             </div>
                         </div>
-                        <img src={img4} />
+                        <img src={img4} alt='Billing GUI' />
                     </div>
                     <div className="work-desc">
                         <span className="work-desc-title">Billing GUI(Python)</span>
@@ -94,7 +95,7 @@ export default function Work() {
                                 <a href="https://github.com/harshk461/weather-hk"><FaGithub size={25} /></a>
                             </div>
                         </div>
-                        <img src={img5} />
+                        <img src={img5} alt='Weather' />
                     </div>
                     <div className="work-desc">
                         <span className="work-desc-title">Weather Forecast</span>
@@ -111,11 +112,25 @@ export default function Work() {
                                 <a href="https://github.com/harshk461/music-player1"><FaGithub size={25} /></a>
                             </div>
                         </div>
-                        <img src={img6} />
+                        <img src={img6} alt='Music Player' />
                     </div>
                     <div className="work-desc">
                         <span className="work-desc-title">Music Player</span>
                         <span className="work-desc-desc">Enjoy some music...</span>
+                    </div>
+                </div>
+                <div className="work-box">
+                    <div className="work-image">
+                        <div className="work-image-banner">
+                            <div className="work-icon">
+                                <a href="https://github.com/harshk461/Quotely"><FaGithub size={25} /></a>
+                            </div>
+                        </div>
+                        <img src={img7} alt='Quotely' />
+                    </div>
+                    <div className="work-desc">
+                        <span className="work-desc-title">Quotely</span>
+                        <span className="work-desc-desc">Post some quotes...</span>
                     </div>
                 </div>
             </div>
