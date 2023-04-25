@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/navbar'
 import { TypeAnimation } from 'react-type-animation'
-import { FaGithub, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import { SiLeetcode } from 'react-icons/si'
 import './home.css'
 import userLogo from '../../assets/user_logo.png'
@@ -12,7 +12,7 @@ export default function Home() {
             <Navbar />
             <div className="home-content">
                 <div className="home-image">
-                    <img src={userLogo} />
+                    <img src={userLogo} alt='User logo' />
                 </div>
                 <div className="home-title">
                     <h1>Hi, I am <TypeAnimation
@@ -32,7 +32,7 @@ export default function Home() {
                     <h7>Code your way to success with a developer who knows web and app like the back of their screen!</h7>
                 </div>
                 <div className="home-socials-link">
-                    <a href="https://github.com/harshk461" target="_blank">
+                    <a href="https://github.com/harshk461" target="_blank" rel='noreferrer'>
                         <div className="social-link">
                             <div className="link">
                                 <FaGithub size={25} />
@@ -42,7 +42,7 @@ export default function Home() {
                             </div>
                         </div>
                     </a>
-                    <a href="https://instagram.com/harshk_8597?igshid=ZDdkNTZiNTM=" target="_blank">
+                    <a href="https://instagram.com/harshk_8597?igshid=ZDdkNTZiNTM=" target="_blank" rel='noreferrer'>
                         <div className="social-link">
                             <div className="link">
                                 <FaInstagram size={25} />
@@ -52,7 +52,7 @@ export default function Home() {
                             </div>
                         </div>
                     </a>
-                    <a href="https://www.linkedin.com/in/harshk87/" target="_blank">
+                    <a href="https://www.linkedin.com/in/harshk87/" target="_blank" rel='noreferrer'>
                         <div className="social-link">
                             <div className="link">
                                 <FaLinkedinIn size={25} />
@@ -62,7 +62,7 @@ export default function Home() {
                             </div>
                         </div>
                     </a>
-                    <a href="https://leetcode.com/hk2152573/" target="_blank">
+                    <a href="https://leetcode.com/hk2152573/" target="_blank" rel='noreferrer'>
                         <div className="social-link">
                             <div className="link">
                                 <SiLeetcode size={25} />
