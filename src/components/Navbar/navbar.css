@@ -92,12 +92,17 @@
 
 .menu-option {
     width: 400px;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 10px;
+    border-radius: 20px;
     background-color: #162033;
     text-align: center;
     outline: 2px solid #72E2AE;
     color: #72E2AE;
+}
+
+.menu-option h1 {
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 .hire-btn {

@@ -13,7 +13,7 @@ export default function Contact() {
     const [email, setemail] = useState('');
     const [subject, setsubject] = useState('');
     const [message, setmessage] = useState('');
-    const [isLoading, setisLoading] = useState(false);
+    let [isLoading, setisLoading] = useState(false);
     const reset = () => {
         setname('');
         setemail('');
@@ -35,14 +35,14 @@ export default function Contact() {
         `;
         return res_msg;
     }
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         if (name === '' || email === '' || subject === '' || message === '') {
             toast.warning("Enter all fields");
         }
         else {
-            setisLoading(true);
-
-            emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, {
+            var new_load = true;
+            setisLoading(new_load);
+            await emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, {
                 reply_to: "hk2152573@gmail.com",
                 name: name.toUpperCase,
                 email: email,
@@ -70,8 +70,8 @@ export default function Contact() {
                 .catch((err) => {
                     toast.error("Error Occurred...");
                 });
-
-            setisLoading(false);
+            new_load = false;
+            setisLoading(new_load);
             reset();
         }
 

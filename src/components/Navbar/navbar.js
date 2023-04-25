@@ -64,7 +64,7 @@ export default function Navbar() {
             <a href="/contact"><h1>Contact</h1></a>
           </div>
         </div>
-        <button className="hire-btn">HIRE ME</button>
+        <a href='/contact' className="hire-btn">HIRE ME</a>
       </div>
     </div>
   )
