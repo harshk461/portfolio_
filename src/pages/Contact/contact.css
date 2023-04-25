@@ -152,4 +152,12 @@
         padding: 10px;
         gap: 10px;
     }
+
+    .submit-tray {
+        margin-bottom: 20px;
+    }
+
+    .submit-tray .spinner {
+        margin-right: 20px;
+    }
 }

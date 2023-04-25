@@ -36,11 +36,13 @@ export default function Contact() {
         return res_msg;
     }
     const handleSubmit = async () => {
+        var new_load = true;
+        setisLoading(new_load);
         if (name === '' || email === '' || subject === '' || message === '') {
             toast.warning("Enter all fields");
         }
         else {
-            var new_load = true;
+            new_load = true;
             setisLoading(new_load);
             await emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, {
                 reply_to: "hk2152573@gmail.com",

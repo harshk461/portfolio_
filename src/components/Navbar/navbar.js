@@ -21,7 +21,7 @@ export default function Navbar() {
     <div className="navbar-body">
       <div className="navbar-active" id='nav-active' >
         <div className="navbar-left">
-          <a href='/' style={{ color: navColor ? "#72E2AE" : "#fff" }}>Harshkkk.</a>
+          <a href='/' style={{ color: navColor ? "#72E2AE" : "dodgerblue" }}>Harshkkk.</a>
           <span className="title-menu"></span>
         </div>
         <div className="navbar-center">
@@ -38,8 +38,8 @@ export default function Navbar() {
             HIRE ME
           </a>
 
-          <div className="hamburger" id='hamburger' onClick={toggle}>
-            <RxHamburgerMenu style={{ color: navColor ? "#72E2AE" : "#fff" }} />
+          <div className="hamburger" id='hamburger' onClick={toggle} >
+            <RxHamburgerMenu style={{ color: navColor ? "#72E2AE" : "dodgerblue" }} />
           </div>
         </div>
       </div>
