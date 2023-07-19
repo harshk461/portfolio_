@@ -26,11 +26,26 @@ export default function Navbar() {
         </div>
         <div className="navbar-center">
           <div className="navbar-center-tray">
-            <a href="/"><h3>Home</h3></a>
-            <a href="/about"><h3>About</h3></a>
-            <a href="/skill"><h3>Skills</h3></a>
-            <a href="/work"><h3>Work</h3></a>
-            <a href="/contact"><h3>Contact</h3></a>
+            <a href="/">
+              <h3>Home</h3>
+              <div className='nav_underline'></div>
+            </a>
+            <a href="/about">
+              <h3>About</h3>
+              <div className='nav_underline'></div>
+            </a>
+            <a href="/skill">
+              <h3>Skills</h3>
+              <div className='nav_underline'></div>
+            </a>
+            <a href="/work">
+              <h3>Work</h3>
+              <div className='nav_underline'></div>
+            </a>
+            <a href="/contact">
+              <h3>Contact</h3>
+              <div className='nav_underline'></div>
+            </a>
           </div>
         </div>
         <div className="navbar-right">

@@ -30,7 +30,7 @@ export default function About() {
                         </div>
                         <ul>
                             <li>Name: <span>Harsh</span></li>
-                            <li>Age: <span>19 years</span></li>
+                            <li>Age: <span>20 years</span></li>
                             <li>Nationality: <span>Indian</span></li>
                             <li>Languages: <span>English,Hindi</span></li>
                             <li>Freelance: <span>Available</span></li>
