@@ -1,9 +1,11 @@
+/* eslint-disable react/jsx-pascal-case */
 import React from 'react'
 import './skill.css'
 import 'animate.css';
 import Service from '../Services/service';
 import Navbar from '../../components/Navbar/navbar';
 import Footer from '../../components/Footer/footer';
+import Skill_Box from '../../components/Skill_Box';
 
 export default function Skill() {
     return (
@@ -46,42 +48,12 @@ export default function Skill() {
                 </div>
             </div>
             <div className="skill-percent">
-                <div className="percent-box animate__animated animate__backInLeft">
-                    <h3>Javascript - <span>(80%)</span></h3>
-                    <div className="percent-bar">
-                        <div className="percent-bar-fill" style={{ width: "80%" }}></div>
-                    </div>
-                </div>
-                <div className="percent-box animate__animated animate__backInRight">
-                    <h3>Node Js - <span>(60%)</span></h3>
-                    <div className="percent-bar">
-                        <div className="percent-bar-fill" style={{ width: "60%" }}></div>
-                    </div>
-                </div>
-                <div className="percent-box animate__animated animate__backInLeft">
-                    <h3>React Js - <span>(80%)</span></h3>
-                    <div className="percent-bar">
-                        <div className="percent-bar-fill" style={{ width: "80%" }}></div>
-                    </div>
-                </div>
-                <div className="percent-box animate__animated animate__backInRight">
-                    <h3>HTML/CSS - <span>(80%)</span></h3>
-                    <div className="percent-bar">
-                        <div className="percent-bar-fill" style={{ width: "80%" }}></div>
-                    </div>
-                </div>
-                <div className="percent-box animate__animated animate__backInLeft">
-                    <h3>Flutter - <span>(85%)</span></h3>
-                    <div className="percent-bar">
-                        <div className="percent-bar-fill" style={{ width: "85%" }}></div>
-                    </div>
-                </div>
-                <div className="percent-box animate__animated animate__backInRight">
-                    <h3>Programming Lang. - <span>(85%)</span></h3>
-                    <div className="percent-bar">
-                        <div className="percent-bar-fill" style={{ width: "85%" }}></div>
-                    </div>
-                </div>
+                <Skill_Box percent={"80"} name={"Javascript"} animate={"animate__backInLeft"} />
+                <Skill_Box percent={"60"} name={"NodeJS"} animate={"animate__backInRight"} />
+                <Skill_Box percent={"80"} name={"React JS"} animate={"animate__backInLeft"} />
+                <Skill_Box percent={"80"} name={"HTML/CSS"} animate={"animate__backInRight"} />
+                <Skill_Box percent={"85"} name={"Flutter"} animate={"animate__backInLeft"} />
+                <Skill_Box percent={"85"} name={"Programming Lang."} animate={"animate__backInRight"} />
             </div>
             <div className="skill-extra">
                 <div className="skill-extra-box animate__animated animate__backInLeft">

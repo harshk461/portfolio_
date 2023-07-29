@@ -8,6 +8,7 @@ import img4 from '../../assets/img4.jpg'
 import img5 from '../../assets/img5.jpg'
 import img6 from '../../assets/img6.jpg'
 import img7 from '../../assets/img7.jpg'
+import img8 from '../../assets/img8.png'
 import { BiMobileAlt } from 'react-icons/bi'
 import { FaGithub, FaGlobe } from 'react-icons/fa'
 import Footer from '../../components/Footer/footer'
@@ -131,6 +132,20 @@ export default function Work() {
                     <div className="work-desc">
                         <span className="work-desc-title">Quotely</span>
                         <span className="work-desc-desc">Post some quotes...</span>
+                    </div>
+                </div>
+                <div className="work-box">
+                    <div className="work-image">
+                        <div className="work-image-banner">
+                            <div className="work-icon">
+                                <a href="https://github.com/harshk461/Heart-Attack-Risk-Analysis"><FaGithub size={25} /></a>
+                            </div>
+                        </div>
+                        <img src={img8} alt='Quotely' />
+                    </div>
+                    <div className="work-desc">
+                        <span className="work-desc-title">Heart Attack Risk Analysis</span>
+                        <span className="work-desc-desc">Stay Healthy</span>
                     </div>
                 </div>
             </div>
