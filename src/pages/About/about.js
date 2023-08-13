@@ -35,7 +35,7 @@ export default function About() {
                             <li>Languages: <span>English,Hindi</span></li>
                             <li>Freelance: <span>Available</span></li>
                         </ul>
-                        <a className="resume-download" href='https://drive.google.com/file/d/19ceGakbJq1QjuXoqrSYxsp0KvJ783Uke/view' target="_blank" rel='noreferrer'>Download Resume</a>
+                        <a className="resume-download" href='https://drive.google.com/file/d/15s5FFzTpnLBwxA_UGsxR_pujnTQt1CUJ/view?usp=sharing' target="_blank" rel='noreferrer'>Download Resume</a>
                     </div>
                 </div>
             </div>
