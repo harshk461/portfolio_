@@ -37,7 +37,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </a>
-                <a href="https://leetcode.com/hk2152573/" target="_blank">
+                <a href="https://leetcode.com/nekopeko7/" target="_blank">
                     <div className="social-link">
                         <div className="link">
                             <SiLeetcode size={25} />

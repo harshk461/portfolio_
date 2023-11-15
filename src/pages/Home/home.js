@@ -62,7 +62,7 @@ export default function Home() {
                             </div>
                         </div>
                     </a>
-                    <a href="https://leetcode.com/hk2152573/" target="_blank" rel='noreferrer'>
+                    <a href="https://leetcode.com/nekopeko7/" target="_blank" rel='noreferrer'>
                         <div className="social-link">
                             <div className="link">
                                 <SiLeetcode size={25} />
